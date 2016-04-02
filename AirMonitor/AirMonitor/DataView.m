@@ -22,7 +22,7 @@
 @property (nonatomic) NSMutableArray *stringLabels;
 @property (nonatomic, assign) NSInteger viewNum;
 @property (nonatomic, assign) CGFloat viewWidth;
-
+@property (nonatomic) UILabel *dateLabel;
 
 @end
 
@@ -32,6 +32,16 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    if(!_dateLabel){
+        _dateLabel = [[UILabel alloc]init];
+        [_dateLabel setFont:[UIFont systemFontOfSize:18.0]];
+        [_dateLabel setTextColor:[UIColor colorWithRGB:0xffffff alpha:0.7]];
+        [_dateLabel setTextAlignment:NSTextAlignmentCenter];
+//        _dateLabel.size = CGSizeMake(100, 30);
+        _dateLabel.center = CGPointMake(SCREEN_WIDTH/2.0, 20);
+        [self addSubview:_dateLabel];
+    }
     
 }
 - (void)layoutSubviews
@@ -73,6 +83,8 @@
                 UIView *view = [[UIView alloc]initWithFrame:CGRectMake(horMargin+i*width, HEIGHT-bottom, width, 0)];
                 [_chartViews addObject:view];
                 [self addSubview:view];
+                
+                
             }
         }
         
@@ -84,6 +96,10 @@
                 UIView *v2 = [[UIView alloc]initWithFrame:CGRectMake(horMargin+i*width, HEIGHT-bottom, width, 0)];
                 UIView *v3 = [[UIView alloc]initWithFrame:CGRectMake(horMargin+i*width, HEIGHT-bottom, width, 0)];
                 UIView *v4 = [[UIView alloc]initWithFrame:CGRectMake(horMargin+i*width, HEIGHT-bottom, width, 0)];
+                [v1 setBackgroundColor:[UIColor colorWithRGB:0xb3ee3a]];
+                [v2 setBackgroundColor:[UIColor colorWithRGB:0xee9a00]];
+                [v3 setBackgroundColor:[UIColor colorWithRGB:0xee0000]];
+                [v4 setBackgroundColor:[UIColor colorWithRGB:0xd15fee]];
                 [_chartViews addObject:v1];
                 [_chartViews addObject:v2];
                 [_chartViews addObject:v3];
@@ -122,9 +138,26 @@
     
 }
 
+- (void)setDataArray:(NSArray *)dataArray
+{
+    _dataArray = dataArray;
+    [self updateUI];
+}
+
+- (void)setMonthArray:(NSArray *)monthArray
+{
+    _monthArray = monthArray;
+    [self updateUI];
+}
+
 - (void) updateUI{
     if(_dataArray){
         if(_dataType != DataTypeMonth){
+            
+            CGFloat num = _dataType == DataTypeHour ? 24.0 : 31.0;
+            CGFloat hor = 10;
+            CGFloat bottom = 30;
+            CGFloat width = (SCREEN_WIDTH-hor*2)/num;
             
             for(int i = 0; i < _dataArray.count; i++){
                 
@@ -160,10 +193,7 @@
                 else{
                     MAX = 1000.0;
                 }
-                CGFloat num = _dataType == DataTypeHour ? 24.0 : 31.0;
-                CGFloat hor = 10;
-                CGFloat bottom = 30;
-                CGFloat width = (SCREEN_WIDTH-hor*2)/num;
+                
                 CGFloat height = (HEIGHT-100-bottom)*(aqi.level/(float)MAX);
                 UIView *view = _chartViews[i];
                 
@@ -184,6 +214,14 @@
                 }];
             }
             
+        
+            for(int i = (int)_dataArray.count;i < _chartViews.count;i++){
+                UIView *v = _chartViews[i];
+                [UIView animateWithDuration:1.0 animations:^{
+                   
+                    v.size = CGSizeMake(width, 0);
+                }];
+            }
             
             //update num label
             CGFloat MAX = 0;
@@ -203,13 +241,61 @@
             }
         }
     }
+    
+    if(_dataType == DataTypeMonth && _monthArray){
+        
+        CGFloat hor = 10;
+        CGFloat bottom = 30;
+        CGFloat width = (SCREEN_WIDTH-hor*2)/12;
+        for(int i = 0; i < _monthArray.count/4;i++){
+            
+            int a = ((NSNumber *)_monthArray[4*i]).intValue;
+            int b = ((NSNumber *)_monthArray[4*i+1]).intValue;
+            int c = ((NSNumber *)_monthArray[4*i+2]).intValue;
+            int d = ((NSNumber *)_monthArray[4*i+3]).intValue;
+            UIView *v1 = _chartViews[4*i];
+            UIView *v2 = _chartViews[4*i+1];
+            UIView *v3 = _chartViews[4*i+2];
+            UIView *v4 = _chartViews[4*i+3];
+            
+           
+            CGFloat height1 = (HEIGHT-100-bottom)*(a/100.0);
+            CGFloat height2 = (HEIGHT-100-bottom)*(b/100.0);
+            CGFloat height3 = (HEIGHT-100-bottom)*(c/100.0);
+            CGFloat height4 = (HEIGHT-100-bottom)*(d/100.0);
+
+            [UIView animateWithDuration:1.0 animations:^{
+               
+                v1.frame = CGRectMake(hor+i*width+2, HEIGHT-30-height1, width-2, height1);
+                v2.frame = CGRectMake(hor+i*width+2, HEIGHT-30-height1-height2, width-2, height2);
+                v3.frame = CGRectMake(hor+i*width+2, HEIGHT-30-height1-height2-height3, width-2, height3);
+                v4.frame = CGRectMake(hor+i*width+2, HEIGHT-30-height1-height2-height3-height4, width-2, height4);
+            }];
+            
+        }
+        
+        for(int i = (int)_monthArray.count;i < 48;i++){
+            UIView *view = _chartViews[i];
+            
+            [UIView animateWithDuration:1.0 animations:^{
+                view.size = CGSizeMake(width, 0);    
+            }];
+            
+        }
+    }
+    
+    if(_dateString){
+        [_dateLabel setText:_dateString];
+        [_dateLabel sizeToFit];
+        _dateLabel.center = CGPointMake(SCREEN_WIDTH/2.0, 20);
+    }
 }
 
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
     
-
+    CGContextRef context = UIGraphicsGetCurrentContext();
     if(_dataType != DataTypeMonth){
         
         CGFloat MAX = 1000.0;
@@ -231,7 +317,7 @@
             
         }
         
-        CGContextRef context = UIGraphicsGetCurrentContext();
+        
         CGContextSetRGBStrokeColor(context, 1, 1, 1, 0.2);
         for(int i = 0; i < 10;i++){
             
@@ -246,6 +332,46 @@
         CGContextMoveToPoint(context, 0, HEIGHT-30);
         CGContextAddLineToPoint(context, WIDTH, HEIGHT-30);
         CGContextStrokePath(context);
+        
+        
+        if(_dataType == DataTypeHour){
+            
+            CGFloat width = (SCREEN_WIDTH-20)/24.0;
+            for(int i = 0;i < 23;i+=2){
+                NSString *hour = [NSString stringWithFormat:@"%d",i];
+                UIColor *color = [UIColor colorWithWhite:1.0 alpha:0.7];
+                UIFont *font = [UIFont systemFontOfSize:13.0f];
+                [hour drawAtPoint:CGPointMake(10+width*i, HEIGHT-30) withAttributes:@{NSForegroundColorAttributeName : color,
+                                                                                   NSFontAttributeName : font}];
+            }
+        }
+        else{
+            CGFloat width = (SCREEN_WIDTH-20)/31.0;
+            for(int i = 1;i <= 31;i+=2){
+                NSString *day = [NSString stringWithFormat:@"%d",i];
+                UIColor *color = [UIColor colorWithWhite:1.0 alpha:0.7];
+                UIFont *font = [UIFont systemFontOfSize:13.0f];
+                [day drawAtPoint:CGPointMake(10+width*(i-1), HEIGHT-30) withAttributes:@{NSForegroundColorAttributeName : color,
+                                                                                      NSFontAttributeName : font}];
+            }
+        }
+        
+    }
+    else{
+        CGContextSetRGBStrokeColor(context, 1, 1, 1, 0.6);
+        CGContextMoveToPoint(context, 0, 100);
+        CGContextAddLineToPoint(context, WIDTH, 100);
+        CGContextMoveToPoint(context, 0, HEIGHT-30);
+        CGContextAddLineToPoint(context, WIDTH, HEIGHT-30);
+        CGContextStrokePath(context);
+        CGFloat width = (SCREEN_WIDTH-20)/12.0;
+        for(int i = 1;i <= 12;i++){
+            NSString *month = [NSString stringWithFormat:@"%d",i];
+            UIColor *color = [UIColor colorWithWhite:1.0 alpha:0.7];
+            UIFont *font = [UIFont systemFontOfSize:13.0f];
+            [month drawAtPoint:CGPointMake(10+width*(i-1), HEIGHT-30) withAttributes:@{NSForegroundColorAttributeName : color,
+                                                                                     NSFontAttributeName : font}];
+        }
     }
 }
 

@@ -19,6 +19,6 @@
  */
 - (NSArray *) generateDataWithSize : (int)size;
 
-- (NSDictionary *) generateMonthData;
+- (NSArray *) generateMonthDataWithSize : (int)size;
 
 @end

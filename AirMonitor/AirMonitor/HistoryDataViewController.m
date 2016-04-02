@@ -17,6 +17,13 @@
 @property (weak, nonatomic) IBOutlet DataView *hourView;
 @property (weak, nonatomic) IBOutlet DataView *dayView;
 @property (weak, nonatomic) IBOutlet DataView *monthView;
+@property (weak, nonatomic) IBOutlet UIButton *lastButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
+@property (nonatomic) NSDate *now;
+@property (nonatomic) NSDate *hourDate;
+@property (nonatomic) NSDate *dayDate;
+@property (nonatomic) NSDate *monthDate;
 
 @property (nonatomic) HistoryData *data;
 
@@ -68,6 +75,7 @@
     }
     
     NSDate *now = [NSDate date];
+    _now =now;
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"HH"];
     NSString *hourStr = [formatter stringFromDate:now];
@@ -75,11 +83,16 @@
     NSArray *hourArray = [_data generateDataWithSize:hour];
     _hourView.dataArray = hourArray;
     
-    [formatter setDateFormat:@"dd"];
-    NSString *dayStr = [formatter stringFromDate:now];
-    int day = [dayStr intValue];
-    NSArray *dayArray = [_data generateDataWithSize:day];
+//    NSString *dayStr = [formatter stringFromDate:now];
+    int day = (int)now.day;
+    NSArray *dayArray = [_data generateDataWithSize:day-1];
     _dayView.dataArray = dayArray;
+    
+    [formatter setDateFormat:@"MM"];
+    NSString *monthStr = [formatter stringFromDate:now];
+    int month = [monthStr intValue];
+    NSArray *monthArray = [_data generateMonthDataWithSize:month-1];
+    _monthView.monthArray = monthArray;
     
     _hourView.dataType = DataTypeHour;
     _dayView.dataType = DataTypeDay;
@@ -88,6 +101,19 @@
     _dayView.aqiType = AQI;
     _monthView.aqiType = AQI;
     
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    _hourDate = now;
+    _dayDate = now;
+    _monthDate = now;
+    NSString *hourDate = [formatter stringFromDate:now];
+    [formatter setDateFormat:@"yyyy-MM"];
+    NSString *dayDate = [formatter stringFromDate:now];
+    [formatter setDateFormat:@"yyyy"];
+    NSString *monthDate = [formatter stringFromDate:now];
+    
+    _hourView.dateString = hourDate;
+    _dayView.dateString = dayDate;
+    _monthView.dateString = monthDate;
 }
 
 
@@ -120,9 +146,128 @@
 }
 
 - (IBAction)didTapLeft:(id)sender {
+    
+    if(_segmentControl.selectedSegmentIndex == 0){
+        
+        _hourDate =[_hourDate dayByAddingDays:-1];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        NSString *hourDate = [formatter stringFromDate:_hourDate];
+        _hourView.dateString = hourDate;
+        NSArray *arr = [_data generateDataWithSize:24];
+        _hourView.dataArray = arr;
+    }
+    else if(_segmentControl.selectedSegmentIndex == 1){
+        _dayDate =[_dayDate dayByAddingMonths:-1];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM"];
+        NSString *dayDate = [formatter stringFromDate:_dayDate];
+        _dayView.dateString = dayDate;
+        int days = [self getDaysOfMonth:_dayDate];
+        NSArray *arr = [_data generateDataWithSize:days];
+        _dayView.dataArray = arr;
+    }
+    else{
+        _monthDate =[_monthDate dayByAddingYears:-1];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy"];
+        NSString *monthDate = [formatter stringFromDate:_monthDate];
+        _monthView.dateString = monthDate;
+        NSArray *arr = [_data generateMonthDataWithSize:12];
+        _monthView.monthArray = arr;
+    }
+        
 }
 
 - (IBAction)didTapRight:(id)sender {
+    
+    
+    if(_segmentControl.selectedSegmentIndex == 0){
+        
+        _hourDate =[_hourDate dayByAddingDays:1];
+        if([_hourDate compareWithDay:_now] == NSOrderedDescending){
+            _hourDate =[_hourDate dayByAddingDays:-1];
+            return;
+        }
+        int size;
+        if(_hourDate.day == _now.day){
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"HH"];
+            NSString *hourStr = [formatter stringFromDate:_hourDate];
+            size = [hourStr intValue];
+        }
+        else{
+            size = 24;
+        }
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        NSString *hourDate = [formatter stringFromDate:_hourDate];
+        _hourView.dateString = hourDate;
+        NSArray *arr = [_data generateDataWithSize:size];
+        _hourView.dataArray = arr;
+    }
+    else if(_segmentControl.selectedSegmentIndex == 1){
+        _dayDate =[_dayDate dayByAddingMonths:1];
+        if([_dayDate compareWithDay:_now] == NSOrderedDescending){
+            _dayDate =[_dayDate dayByAddingMonths:-1];
+            return;
+        }
+        
+        int size;
+        if(_dayDate.month == _now.month){
+            size = (int)_dayDate.day;
+        }
+        else{
+            size = [self getDaysOfMonth:_dayDate];
+        }
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM"];
+        NSString *dayDate = [formatter stringFromDate:_dayDate];
+        _dayView.dateString = dayDate;
+//        int days = [self getDaysOfMonth:_dayDate];
+        NSArray *arr = [_data generateDataWithSize:size-1];
+        _dayView.dataArray = arr;
+    }
+    else{
+        _monthDate =[_monthDate dayByAddingYears:1];
+        if([_monthDate compareWithDay:_now] == NSOrderedDescending){
+            _monthDate =[_monthDate dayByAddingYears:-1];
+            return;
+        }
+        int size;
+        if(_monthDate.year == _now.year){
+            size = (int)_monthDate.month;
+        }
+        else{
+            size = 12;
+        }
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy"];
+        NSString *monthDate = [formatter stringFromDate:_monthDate];
+        _monthView.dateString = monthDate;
+        NSArray *arr = [_data generateMonthDataWithSize:size-1];
+        _monthView.monthArray = arr;
+    }
+}
+
+// 得到某月的天数
+- (int) getDaysOfMonth : (NSDate *)date
+{
+    NSInteger month = date.month;
+    NSInteger year = date.year;
+    if((month == 1)||(month == 3)||(month == 5)||(month == 7)||(month == 8)||(month == 10)||(month == 12))
+        return 31;
+    if((month == 4)||(month == 6)||(month == 9)||(month == 11))
+        return 30;
+    if((year%4 == 1)||(year%4 == 2)||(year%4 == 3))
+    {
+        return 28;
+    }
+    if(year%400 == 0)
+        return 29;
+    if(year%100 == 0)
+        return 28;
+    return 29;
 }
 
 /*

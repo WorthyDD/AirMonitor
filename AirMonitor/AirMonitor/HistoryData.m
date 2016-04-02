@@ -28,16 +28,26 @@
     return dataArray;
 }
 
-- (NSDictionary *)generateMonthData
+- (NSArray *)generateMonthDataWithSize:(int)size
 {
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
-    for(int i = 0; i < 12;i++){
+    NSMutableArray *arr = [[NSMutableArray alloc]init];
+    for(int i = 0; i < size;i++){
         
         //每个月生成5种污染物所占百分比
+        int a = arc4random()%100;
+        int left = 100-a;
+        int b = arc4random()%left;
+        left -= b;
+        int c = arc4random()%left;
+        left -= c;
+        int d = left;
         
-        
+        [arr addObject:@(a)];
+        [arr addObject:@(b)];
+        [arr addObject:@(c)];
+        [arr addObject:@(d)];
     }
     
-    return dic;
+    return arr;
 }
 @end

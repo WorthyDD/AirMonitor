@@ -30,10 +30,14 @@ typedef enum{
 
 @interface DataView : UIView
 
+@property (nonatomic) NSString *dateString;
+
 @property (nonatomic, assign) DataType dataType;
 @property (nonatomic, assign) AQIType aqiType;
 
 // hour day
 @property (nonatomic) NSArray *dataArray;
 
+//month 
+@property (nonatomic) NSArray *monthArray;
 @end

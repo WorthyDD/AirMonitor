@@ -87,11 +87,11 @@ static NSString *kAddMonitoringStationSegue = @"addMonitorSegue";
         
         //生成污染物指数
         [stattion getAQIIndex];
-        [self.pm25Label setText:[NSString stringWithFormat:@"PM2.5 : %ld",stattion.PM25.level]];
-        [self.pm10Label setText:[NSString stringWithFormat:@"PM10 : %ld",stattion.PM10.level]];
-        [self.o3Label setText:[NSString stringWithFormat:@"O3 : %ld",stattion.O3.level]];
-        [self.no2Label setText:[NSString stringWithFormat:@"NO2 : %ld",stattion.NO2.level]];
-        [self.so2Label setText:[NSString stringWithFormat:@"SO2 : %ld",stattion.SO2.level]];
+        [self.pm25Label setText:[NSString stringWithFormat:@"%ld",stattion.PM25.level]];
+        [self.pm10Label setText:[NSString stringWithFormat:@"%ld",stattion.PM10.level]];
+        [self.o3Label setText:[NSString stringWithFormat:@"%ld",stattion.O3.level]];
+        [self.no2Label setText:[NSString stringWithFormat:@"%ld",stattion.NO2.level]];
+        [self.so2Label setText:[NSString stringWithFormat:@"%ld",stattion.SO2.level]];
         
         //污染物等级
         [self.pm25TipLabel setText:[NSString stringWithFormat:@"Level%ld",stattion.PM25.rank]];
