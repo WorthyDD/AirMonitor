@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Hammersmith &amp; Fulham</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shepherds Bush</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kensington &amp; Chelsea</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Cromwell Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Earls Court Rd</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Kings Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Knightsbridge</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>North Ken</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>North Ken FDMS</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Westminster</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Horseferry Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Marylebone Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Marylebone Road FDMS</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Oxford Street</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Strand (Northbank BID)</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Victoria</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>City of London</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Beech Street</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Farringdon Street</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Sir John Cass School</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Upper Thames Street</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Walbrook Wharf</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Camden
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+	&lt;key&gt;name&lt;/key&gt;
+	&lt;string&gt;City of London&lt;/string&gt;
+	&lt;key&gt;Monitor Point&lt;/key&gt;
+	&lt;array&gt;
+		&lt;string&gt;Horseferry Road&lt;/string&gt;
+		&lt;string&gt;Marylebone Road&lt;/string&gt;
+		&lt;string&gt;Marylebone Road FDMS&lt;/string&gt;
+		&lt;string&gt;Oxford Street&lt;/string&gt;
+		&lt;string&gt;Strand (Northbank BID)&lt;/string&gt;
+		&lt;string&gt;Victoria&lt;/string&gt;
+	&lt;/array&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+	&lt;key&gt;name&lt;/key&gt;
+	&lt;string&gt;City of London&lt;/string&gt;
+	&lt;key&gt;Monitor Point&lt;/key&gt;
+	&lt;array&gt;
+		&lt;string&gt;Horseferry Road&lt;/string&gt;
+		&lt;string&gt;Marylebone Road&lt;/string&gt;
+		&lt;string&gt;Marylebone Road FDMS&lt;/string&gt;
+		&lt;string&gt;Oxford Street&lt;/string&gt;
+		&lt;string&gt;Strand (Northbank BID)&lt;/string&gt;
+		&lt;string&gt;Victoria&lt;/string&gt;
+	&lt;/array&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+Camden</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Bloomsbury</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Euston Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Holborn</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Shaftesbury Avenue</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Swiss Cottage</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Haringey</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Priory Park South</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Haringey Town Hall</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Islington</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Arsenal</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Holloway Road</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hackney</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Old Street</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tower Hamlets</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Blackwall</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Mile End Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Millwall Park</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Victoria Park</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lewisham</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Catford, Loampit Vale</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Mercury Way</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>New Cross</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Southwark</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>A2 Old Kent Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Elephant and Castle</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lambeth</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Bondway Interchange</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Brixton Road</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Streatham Green</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Wandsworth</string>
+		<key>Monitor Point</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Battersea</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Putney</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Putney High Street</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Putney High Street Façade</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Tooting High Street</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Wandsworth Town Hall</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

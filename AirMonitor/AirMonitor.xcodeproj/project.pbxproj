@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC070D0E1CA7E27900D09C0C /* AQIIndexCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CC070D0D1CA7E27900D09C0C /* AQIIndexCollection.m */; };
+		CC070D111CA7E99400D09C0C /* NSDate+Day.m in Sources */ = {isa = PBXBuildFile; fileRef = CC070D101CA7E99400D09C0C /* NSDate+Day.m */; };
+		CCE194F01CA5626600C90EBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE194EF1CA5626600C90EBE /* main.m */; };
+		CCE194F31CA5626600C90EBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE194F21CA5626600C90EBE /* AppDelegate.m */; };
+		CCE194FE1CA5626600C90EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE194FD1CA5626600C90EBE /* Assets.xcassets */; };
+		CCE195011CA5626600C90EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE194FF1CA5626600C90EBE /* LaunchScreen.storyboard */; };
+		CCE1950C1CA5626600C90EBE /* AirMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE1950B1CA5626600C90EBE /* AirMonitorTests.m */; };
+		CCE195171CA5626600C90EBE /* AirMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE195161CA5626600C90EBE /* AirMonitorUITests.m */; };
+		CCE1953F1CA563C500C90EBE /* UIView+Gap.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE1953A1CA563C500C90EBE /* UIView+Gap.m */; };
+		CCE195401CA563C500C90EBE /* UIView+Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE1953C1CA563C500C90EBE /* UIView+Geometry.m */; };
+		CCE195411CA563C500C90EBE /* UIView+IBInspect.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE1953E1CA563C500C90EBE /* UIView+IBInspect.m */; };
+		CCE195451CA564FB00C90EBE /* AirQualityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE195441CA564FB00C90EBE /* AirQualityViewController.m */; };
+		CCF2F9A11CA60D4600159628 /* cityList.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCF2F9A01CA60D4600159628 /* cityList.plist */; };
+		CCF2F9A41CA6142400159628 /* SelectMonitoringStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9A31CA6142400159628 /* SelectMonitoringStationViewController.m */; };
+		CCF2F9A71CA6148E00159628 /* MonitoringStationSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9A61CA6148E00159628 /* MonitoringStationSectionView.m */; };
+		CCF2F9A91CA614A300159628 /* MonitoringStationSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCF2F9A81CA614A300159628 /* MonitoringStationSectionView.xib */; };
+		CCF2F9AC1CA6165300159628 /* ConstantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9AB1CA6165300159628 /* ConstantManager.m */; };
+		CCF2F9B01CA6185300159628 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9AF1CA6185300159628 /* City.m */; };
+		CCF2F9B31CA6186600159628 /* MonitoringStation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9B21CA6186600159628 /* MonitoringStation.m */; };
+		CCF2F9B61CA626B800159628 /* UIColor+TAToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9B51CA626B800159628 /* UIColor+TAToolkit.m */; };
+		CCF2F9B91CA633BC00159628 /* AQIIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9B81CA633BC00159628 /* AQIIndex.m */; };
+		CCF2F9BF1CA68A2200159628 /* HistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9BE1CA68A2200159628 /* HistoryData.m */; };
+		CCF2F9C21CA691AD00159628 /* DataView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9C11CA691AD00159628 /* DataView.m */; };
+		CCF2F9C41CA692CE00159628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE194FA1CA5626600C90EBE /* Main.storyboard */; };
+		CCF2F9C51CA692F600159628 /* HistoryDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF2F9BB1CA6877C00159628 /* HistoryDataViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCE195081CA5626600C90EBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE194E31CA5626600C90EBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCE194EA1CA5626600C90EBE;
+			remoteInfo = AirMonitor;
+		};
+		CCE195131CA5626600C90EBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE194E31CA5626600C90EBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCE194EA1CA5626600C90EBE;
+			remoteInfo = AirMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC070D0C1CA7E27900D09C0C /* AQIIndexCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQIIndexCollection.h; sourceTree = "<group>"; };
+		CC070D0D1CA7E27900D09C0C /* AQIIndexCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQIIndexCollection.m; sourceTree = "<group>"; };
+		CC070D0F1CA7E99400D09C0C /* NSDate+Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Day.h"; path = "Tool/NSDate+Day.h"; sourceTree = "<group>"; };
+		CC070D101CA7E99400D09C0C /* NSDate+Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Day.m"; path = "Tool/NSDate+Day.m"; sourceTree = "<group>"; };
+		CCE194EB1CA5626600C90EBE /* AirMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE194EF1CA5626600C90EBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCE194F11CA5626600C90EBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CCE194F21CA5626600C90EBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CCE194FB1CA5626600C90EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCE194FD1CA5626600C90EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCE195001CA5626600C90EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCE195021CA5626600C90EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE195071CA5626600C90EBE /* AirMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE1950B1CA5626600C90EBE /* AirMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirMonitorTests.m; sourceTree = "<group>"; };
+		CCE1950D1CA5626600C90EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE195121CA5626600C90EBE /* AirMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE195161CA5626600C90EBE /* AirMonitorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirMonitorUITests.m; sourceTree = "<group>"; };
+		CCE195181CA5626600C90EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE195391CA563C500C90EBE /* UIView+Gap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Gap.h"; path = "Tool/UIView+Gap.h"; sourceTree = "<group>"; };
+		CCE1953A1CA563C500C90EBE /* UIView+Gap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Gap.m"; path = "Tool/UIView+Gap.m"; sourceTree = "<group>"; };
+		CCE1953B1CA563C500C90EBE /* UIView+Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Geometry.h"; path = "Tool/UIView+Geometry.h"; sourceTree = "<group>"; };
+		CCE1953C1CA563C500C90EBE /* UIView+Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Geometry.m"; path = "Tool/UIView+Geometry.m"; sourceTree = "<group>"; };
+		CCE1953D1CA563C500C90EBE /* UIView+IBInspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+IBInspect.h"; path = "Tool/UIView+IBInspect.h"; sourceTree = "<group>"; };
+		CCE1953E1CA563C500C90EBE /* UIView+IBInspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+IBInspect.m"; path = "Tool/UIView+IBInspect.m"; sourceTree = "<group>"; };
+		CCE195421CA563E700C90EBE /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		CCE195431CA564FB00C90EBE /* AirQualityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirQualityViewController.h; sourceTree = "<group>"; };
+		CCE195441CA564FB00C90EBE /* AirQualityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirQualityViewController.m; sourceTree = "<group>"; };
+		CCF2F9A01CA60D4600159628 /* cityList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityList.plist; sourceTree = "<group>"; };
+		CCF2F9A21CA6142400159628 /* SelectMonitoringStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMonitoringStationViewController.h; sourceTree = "<group>"; };
+		CCF2F9A31CA6142400159628 /* SelectMonitoringStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMonitoringStationViewController.m; sourceTree = "<group>"; };
+		CCF2F9A51CA6148E00159628 /* MonitoringStationSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoringStationSectionView.h; sourceTree = "<group>"; };
+		CCF2F9A61CA6148E00159628 /* MonitoringStationSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoringStationSectionView.m; sourceTree = "<group>"; };
+		CCF2F9A81CA614A300159628 /* MonitoringStationSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitoringStationSectionView.xib; sourceTree = "<group>"; };
+		CCF2F9AA1CA6165300159628 /* ConstantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantManager.h; sourceTree = "<group>"; };
+		CCF2F9AB1CA6165300159628 /* ConstantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantManager.m; sourceTree = "<group>"; };
+		CCF2F9AE1CA6185300159628 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		CCF2F9AF1CA6185300159628 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		CCF2F9B11CA6186600159628 /* MonitoringStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitoringStation.h; sourceTree = "<group>"; };
+		CCF2F9B21CA6186600159628 /* MonitoringStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitoringStation.m; sourceTree = "<group>"; };
+		CCF2F9B41CA626B800159628 /* UIColor+TAToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+TAToolkit.h"; path = "Tool/UIColor+TAToolkit.h"; sourceTree = "<group>"; };
+		CCF2F9B51CA626B800159628 /* UIColor+TAToolkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+TAToolkit.m"; path = "Tool/UIColor+TAToolkit.m"; sourceTree = "<group>"; };
+		CCF2F9B71CA633BC00159628 /* AQIIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQIIndex.h; sourceTree = "<group>"; };
+		CCF2F9B81CA633BC00159628 /* AQIIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQIIndex.m; sourceTree = "<group>"; };
+		CCF2F9BA1CA6877C00159628 /* HistoryDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDataViewController.h; sourceTree = "<group>"; };
+		CCF2F9BB1CA6877C00159628 /* HistoryDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataViewController.m; sourceTree = "<group>"; };
+		CCF2F9BD1CA68A2200159628 /* HistoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryData.h; sourceTree = "<group>"; };
+		CCF2F9BE1CA68A2200159628 /* HistoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryData.m; sourceTree = "<group>"; };
+		CCF2F9C01CA691AD00159628 /* DataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataView.h; sourceTree = "<group>"; };
+		CCF2F9C11CA691AD00159628 /* DataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCE194E81CA5626600C90EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE195041CA5626600C90EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE1950F1CA5626600C90EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCE194E21CA5626600C90EBE = {
+			isa = PBXGroup;
+			children = (
+				CCE194ED1CA5626600C90EBE /* AirMonitor */,
+				CCE1950A1CA5626600C90EBE /* AirMonitorTests */,
+				CCE195151CA5626600C90EBE /* AirMonitorUITests */,
+				CCE194EC1CA5626600C90EBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCE194EC1CA5626600C90EBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCE194EB1CA5626600C90EBE /* AirMonitor.app */,
+				CCE195071CA5626600C90EBE /* AirMonitorTests.xctest */,
+				CCE195121CA5626600C90EBE /* AirMonitorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCE194ED1CA5626600C90EBE /* AirMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				CCE195251CA5629600C90EBE /* Tool */,
+				CCF2F9AD1CA6182700159628 /* Modal */,
+				CCE195241CA5628300C90EBE /* ViewController */,
+				CCE195261CA562A300C90EBE /* View */,
+				CCE194EE1CA5626600C90EBE /* Supporting Files */,
+			);
+			path = AirMonitor;
+			sourceTree = "<group>";
+		};
+		CCE194EE1CA5626600C90EBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCE194FA1CA5626600C90EBE /* Main.storyboard */,
+				CCE194F11CA5626600C90EBE /* AppDelegate.h */,
+				CCE194F21CA5626600C90EBE /* AppDelegate.m */,
+				CCE194FD1CA5626600C90EBE /* Assets.xcassets */,
+				CCE194FF1CA5626600C90EBE /* LaunchScreen.storyboard */,
+				CCE195021CA5626600C90EBE /* Info.plist */,
+				CCE194EF1CA5626600C90EBE /* main.m */,
+				CCF2F9A01CA60D4600159628 /* cityList.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCE1950A1CA5626600C90EBE /* AirMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1950B1CA5626600C90EBE /* AirMonitorTests.m */,
+				CCE1950D1CA5626600C90EBE /* Info.plist */,
+			);
+			path = AirMonitorTests;
+			sourceTree = "<group>";
+		};
+		CCE195151CA5626600C90EBE /* AirMonitorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCE195161CA5626600C90EBE /* AirMonitorUITests.m */,
+				CCE195181CA5626600C90EBE /* Info.plist */,
+			);
+			path = AirMonitorUITests;
+			sourceTree = "<group>";
+		};
+		CCE195241CA5628300C90EBE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CCE195431CA564FB00C90EBE /* AirQualityViewController.h */,
+				CCE195441CA564FB00C90EBE /* AirQualityViewController.m */,
+				CCF2F9A21CA6142400159628 /* SelectMonitoringStationViewController.h */,
+				CCF2F9A31CA6142400159628 /* SelectMonitoringStationViewController.m */,
+				CCF2F9BA1CA6877C00159628 /* HistoryDataViewController.h */,
+				CCF2F9BB1CA6877C00159628 /* HistoryDataViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CCE195251CA5629600C90EBE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CC070D0F1CA7E99400D09C0C /* NSDate+Day.h */,
+				CC070D101CA7E99400D09C0C /* NSDate+Day.m */,
+				CCF2F9B41CA626B800159628 /* UIColor+TAToolkit.h */,
+				CCF2F9B51CA626B800159628 /* UIColor+TAToolkit.m */,
+				CCE195391CA563C500C90EBE /* UIView+Gap.h */,
+				CCE1953A1CA563C500C90EBE /* UIView+Gap.m */,
+				CCE1953B1CA563C500C90EBE /* UIView+Geometry.h */,
+				CCE1953C1CA563C500C90EBE /* UIView+Geometry.m */,
+				CCE1953D1CA563C500C90EBE /* UIView+IBInspect.h */,
+				CCE1953E1CA563C500C90EBE /* UIView+IBInspect.m */,
+				CCE195421CA563E700C90EBE /* Tool.h */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		CCE195261CA562A300C90EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2F9A51CA6148E00159628 /* MonitoringStationSectionView.h */,
+				CCF2F9A61CA6148E00159628 /* MonitoringStationSectionView.m */,
+				CCF2F9A81CA614A300159628 /* MonitoringStationSectionView.xib */,
+				CCF2F9C01CA691AD00159628 /* DataView.h */,
+				CCF2F9C11CA691AD00159628 /* DataView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CCF2F9AD1CA6182700159628 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2F9AA1CA6165300159628 /* ConstantManager.h */,
+				CCF2F9AB1CA6165300159628 /* ConstantManager.m */,
+				CCF2F9AE1CA6185300159628 /* City.h */,
+				CCF2F9AF1CA6185300159628 /* City.m */,
+				CCF2F9B11CA6186600159628 /* MonitoringStation.h */,
+				CCF2F9B21CA6186600159628 /* MonitoringStation.m */,
+				CCF2F9B71CA633BC00159628 /* AQIIndex.h */,
+				CCF2F9B81CA633BC00159628 /* AQIIndex.m */,
+				CC070D0C1CA7E27900D09C0C /* AQIIndexCollection.h */,
+				CC070D0D1CA7E27900D09C0C /* AQIIndexCollection.m */,
+				CCF2F9BD1CA68A2200159628 /* HistoryData.h */,
+				CCF2F9BE1CA68A2200159628 /* HistoryData.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCE194EA1CA5626600C90EBE /* AirMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE1951B1CA5626600C90EBE /* Build configuration list for PBXNativeTarget "AirMonitor" */;
+			buildPhases = (
+				CCE194E71CA5626600C90EBE /* Sources */,
+				CCE194E81CA5626600C90EBE /* Frameworks */,
+				CCE194E91CA5626600C90EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirMonitor;
+			productName = AirMonitor;
+			productReference = CCE194EB1CA5626600C90EBE /* AirMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCE195061CA5626600C90EBE /* AirMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE1951E1CA5626600C90EBE /* Build configuration list for PBXNativeTarget "AirMonitorTests" */;
+			buildPhases = (
+				CCE195031CA5626600C90EBE /* Sources */,
+				CCE195041CA5626600C90EBE /* Frameworks */,
+				CCE195051CA5626600C90EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCE195091CA5626600C90EBE /* PBXTargetDependency */,
+			);
+			name = AirMonitorTests;
+			productName = AirMonitorTests;
+			productReference = CCE195071CA5626600C90EBE /* AirMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCE195111CA5626600C90EBE /* AirMonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE195211CA5626600C90EBE /* Build configuration list for PBXNativeTarget "AirMonitorUITests" */;
+			buildPhases = (
+				CCE1950E1CA5626600C90EBE /* Sources */,
+				CCE1950F1CA5626600C90EBE /* Frameworks */,
+				CCE195101CA5626600C90EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCE195141CA5626600C90EBE /* PBXTargetDependency */,
+			);
+			name = AirMonitorUITests;
+			productName = AirMonitorUITests;
+			productReference = CCE195121CA5626600C90EBE /* AirMonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCE194E31CA5626600C90EBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "武淅 段";
+				TargetAttributes = {
+					CCE194EA1CA5626600C90EBE = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = U2PCGD3G55;
+					};
+					CCE195061CA5626600C90EBE = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = CCE194EA1CA5626600C90EBE;
+					};
+					CCE195111CA5626600C90EBE = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = CCE194EA1CA5626600C90EBE;
+					};
+				};
+			};
+			buildConfigurationList = CCE194E61CA5626600C90EBE /* Build configuration list for PBXProject "AirMonitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCE194E21CA5626600C90EBE;
+			productRefGroup = CCE194EC1CA5626600C90EBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCE194EA1CA5626600C90EBE /* AirMonitor */,
+				CCE195061CA5626600C90EBE /* AirMonitorTests */,
+				CCE195111CA5626600C90EBE /* AirMonitorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCE194E91CA5626600C90EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE195011CA5626600C90EBE /* LaunchScreen.storyboard in Resources */,
+				CCF2F9C41CA692CE00159628 /* Main.storyboard in Resources */,
+				CCF2F9A11CA60D4600159628 /* cityList.plist in Resources */,
+				CCF2F9A91CA614A300159628 /* MonitoringStationSectionView.xib in Resources */,
+				CCE194FE1CA5626600C90EBE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE195051CA5626600C90EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE195101CA5626600C90EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCE194E71CA5626600C90EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF2F9BF1CA68A2200159628 /* HistoryData.m in Sources */,
+				CCF2F9C51CA692F600159628 /* HistoryDataViewController.m in Sources */,
+				CCF2F9B01CA6185300159628 /* City.m in Sources */,
+				CCF2F9AC1CA6165300159628 /* ConstantManager.m in Sources */,
+				CCE1953F1CA563C500C90EBE /* UIView+Gap.m in Sources */,
+				CCF2F9A71CA6148E00159628 /* MonitoringStationSectionView.m in Sources */,
+				CCF2F9B91CA633BC00159628 /* AQIIndex.m in Sources */,
+				CCF2F9B31CA6186600159628 /* MonitoringStation.m in Sources */,
+				CCE194F31CA5626600C90EBE /* AppDelegate.m in Sources */,
+				CCE195411CA563C500C90EBE /* UIView+IBInspect.m in Sources */,
+				CCF2F9C21CA691AD00159628 /* DataView.m in Sources */,
+				CCE195451CA564FB00C90EBE /* AirQualityViewController.m in Sources */,
+				CCF2F9A41CA6142400159628 /* SelectMonitoringStationViewController.m in Sources */,
+				CC070D111CA7E99400D09C0C /* NSDate+Day.m in Sources */,
+				CCF2F9B61CA626B800159628 /* UIColor+TAToolkit.m in Sources */,
+				CCE195401CA563C500C90EBE /* UIView+Geometry.m in Sources */,
+				CC070D0E1CA7E27900D09C0C /* AQIIndexCollection.m in Sources */,
+				CCE194F01CA5626600C90EBE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE195031CA5626600C90EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE1950C1CA5626600C90EBE /* AirMonitorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE1950E1CA5626600C90EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE195171CA5626600C90EBE /* AirMonitorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCE195091CA5626600C90EBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCE194EA1CA5626600C90EBE /* AirMonitor */;
+			targetProxy = CCE195081CA5626600C90EBE /* PBXContainerItemProxy */;
+		};
+		CCE195141CA5626600C90EBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCE194EA1CA5626600C90EBE /* AirMonitor */;
+			targetProxy = CCE195131CA5626600C90EBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCE194FA1CA5626600C90EBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCE194FB1CA5626600C90EBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCE194FF1CA5626600C90EBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCE195001CA5626600C90EBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCE195191CA5626600C90EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CCE1951A1CA5626600C90EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCE1951C1CA5626600C90EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = AirMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuxi.AirMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		CCE1951D1CA5626600C90EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = AirMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuxi.AirMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		CCE1951F1CA5626600C90EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AirMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuxi.AirMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirMonitor.app/AirMonitor";
+			};
+			name = Debug;
+		};
+		CCE195201CA5626600C90EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AirMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuxi.AirMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirMonitor.app/AirMonitor";
+			};
+			name = Release;
+		};
+		CCE195221CA5626600C90EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AirMonitorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuxi.AirMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AirMonitor;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CCE195231CA5626600C90EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AirMonitorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuxi.AirMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AirMonitor;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCE194E61CA5626600C90EBE /* Build configuration list for PBXProject "AirMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE195191CA5626600C90EBE /* Debug */,
+				CCE1951A1CA5626600C90EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE1951B1CA5626600C90EBE /* Build configuration list for PBXNativeTarget "AirMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE1951C1CA5626600C90EBE /* Debug */,
+				CCE1951D1CA5626600C90EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE1951E1CA5626600C90EBE /* Build configuration list for PBXNativeTarget "AirMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE1951F1CA5626600C90EBE /* Debug */,
+				CCE195201CA5626600C90EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE195211CA5626600C90EBE /* Build configuration list for PBXNativeTarget "AirMonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE195221CA5626600C90EBE /* Debug */,
+				CCE195231CA5626600C90EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCE194E31CA5626600C90EBE /* Project object */;
+}
