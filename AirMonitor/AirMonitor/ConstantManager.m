@@ -36,8 +36,13 @@
             
             for(NSDictionary *statitionDic in arr){
                 NSString *stationName = [statitionDic objectForKey:@"name"];
+                double latitude = ((NSNumber *)[statitionDic objectForKey:@"latitude"]).doubleValue;
+                double longitude = ((NSNumber *)[statitionDic objectForKey:@"longitude"]).doubleValue;
+
                 MonitoringStation *station = [[MonitoringStation alloc]init];
                 station.name = stationName;
+                CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+                station.coordinate = coordinate;
                 [city.monitoringStationArray addObject:station];
             }
             [_cityArray addObject:city];

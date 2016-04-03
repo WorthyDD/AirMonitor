@@ -180,7 +180,6 @@
 				CCE194FF1CA5626600C90EBE /* LaunchScreen.storyboard */,
 				CCE195021CA5626600C90EBE /* Info.plist */,
 				CCE194EF1CA5626600C90EBE /* main.m */,
-				CCF2F9A01CA60D4600159628 /* cityList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,6 +264,7 @@
 				CC070D0D1CA7E27900D09C0C /* AQIIndexCollection.m */,
 				CCF2F9BD1CA68A2200159628 /* HistoryData.h */,
 				CCF2F9BE1CA68A2200159628 /* HistoryData.m */,
+				CCF2F9A01CA60D4600159628 /* cityList.plist */,
 			);
 			name = Modal;
 			sourceTree = "<group>";

@@ -1981,7 +1981,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History Data" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="History Data" image="data" id="cPa-gy-q4n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="dayView" destination="seh-e3-WDI" id="Gb9-DS-TPl"/>
@@ -2012,7 +2012,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bkT-wv-geA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="19C-de-LYs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gWn-Iu-WJ7">
@@ -2045,6 +2045,9 @@
                                 <exclude reference="gWn-Iu-WJ7"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IDh-UR-DKz"/>
+                                <exclude reference="jEq-T7-Hul"/>
+                                <exclude reference="mqX-rw-8SZ"/>
                                 <exclude reference="6x6-E0-6yl"/>
                                 <exclude reference="9dQ-JX-XZQ"/>
                                 <exclude reference="Fyc-HM-QBn"/>
@@ -2052,9 +2055,6 @@
                                 <exclude reference="cST-E8-Y4e"/>
                                 <exclude reference="t0m-fX-Y9m"/>
                                 <exclude reference="wgK-u0-BkD"/>
-                                <exclude reference="IDh-UR-DKz"/>
-                                <exclude reference="jEq-T7-Hul"/>
-                                <exclude reference="mqX-rw-8SZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -2062,6 +2062,9 @@
                                 <include reference="gWn-Iu-WJ7"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IDh-UR-DKz"/>
+                                <exclude reference="jEq-T7-Hul"/>
+                                <include reference="mqX-rw-8SZ"/>
                                 <exclude reference="6x6-E0-6yl"/>
                                 <include reference="9dQ-JX-XZQ"/>
                                 <exclude reference="Fyc-HM-QBn"/>
@@ -2069,9 +2072,6 @@
                                 <exclude reference="cST-E8-Y4e"/>
                                 <exclude reference="t0m-fX-Y9m"/>
                                 <include reference="wgK-u0-BkD"/>
-                                <exclude reference="IDh-UR-DKz"/>
-                                <exclude reference="jEq-T7-Hul"/>
-                                <include reference="mqX-rw-8SZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -2110,7 +2110,7 @@
         <scene sceneID="Y6r-MQ-rfy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g2R-Bt-UwE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Air Qulity" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Air Qulity" image="weather" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oxt-y7-waT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2131,7 +2131,7 @@
         <scene sceneID="lCj-bu-map">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xyk-YT-cTd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HZe-Pa-YYJ"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="map" id="HZe-Pa-YYJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JnS-g5-BlW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2150,11 +2150,13 @@
     </scenes>
     <resources>
         <image name="bg" width="207" height="350"/>
+        <image name="data" width="30" height="29"/>
         <image name="kid-icon" width="36" height="36"/>
         <image name="left" width="16" height="16"/>
+        <image name="map" width="30" height="29"/>
         <image name="mask-icon" width="36" height="36"/>
         <image name="right" width="14" height="14"/>
-        <image name="second" width="30" height="30"/>
         <image name="walkout-icon" width="36" height="36"/>
+        <image name="weather" width="30" height="25"/>
     </resources>
 </document>

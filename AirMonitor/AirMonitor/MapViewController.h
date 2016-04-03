@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "WXAnnotation.h"
+#import "ConstantManager.h"
+#import "City.h"
+#import "MonitoringStation.h"
+#import "AQIIndex.h"
 
 @interface MapViewController : UIViewController
 

@@ -28,19 +28,23 @@
         }
         
     }
-    else if(level < _level4){
+    else if(level <= _level6){
         self.colorStr = @"#ee9a00";
-        _rank = 4;
+        
+        if(level <= _level4){
+            _rank = 4;
+        }
+        else if(level <= _level5){
+            _rank = 5;
+        }
+        else{
+            _rank = 6;
+        }
     }
     else if(level < _level9){
         self.colorStr = @"#ee0000";
-        if(level <= _level5){
-            _rank = 5;
-        }
-        else if(level <= _level6){
-            _rank = 6;
-        }
-        else if(level <= 7){
+        
+        if(level <= 7){
             _rank = 7;
         }
         else if(level <= _level8){

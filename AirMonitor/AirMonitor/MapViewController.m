@@ -22,8 +22,10 @@
     [super viewDidLoad];
     _mapView.userTrackingMode = MKUserTrackingModeFollow;
     _mapView.mapType = MKMapTypeStandard;
-    
+    _mapView.delegate = self;
     [self startLocationService];
+    [self addAnnotations];
+    
 }
 
 
@@ -67,13 +69,46 @@
 
 
 #pragma mark 添加大头针
--(void)addAnnotation{
+
+/**
+-(void)addAnnotation : (CLLocationCoordinate2D) coornidate{
     
     WXAnnotation *annotation=[[WXAnnotation alloc]init];
 
-    annotation.coordinate=_coordinate;
+    annotation.coordinate=coornidate;
     [_mapView addAnnotation:annotation];
     
+}*/
+
+- (void) addAnnotations
+{
+    NSArray *cityArr = [ConstantManager shareManager].cityArray;
+    
+    for(City *city in cityArr){
+        for(MonitoringStation *station in city.monitoringStationArray){
+            
+            AQIIndex *aqi = station.mainAQI;
+            CLLocationCoordinate2D coordinate = station.coordinate;
+            WXAnnotation *annotation = [[WXAnnotation alloc]init];
+            if(aqi.level<=aqi.level3){
+                annotation.image = [UIImage imageNamed:@"green"];
+            }
+            else if(aqi.level <= aqi.level6){
+                annotation.image = [UIImage imageNamed:@"orange"];
+            }
+            else if(aqi.level <= aqi.level9){
+                annotation.image = [UIImage imageNamed:@"red"];
+            }
+            else{
+                annotation.image = [UIImage imageNamed:@"purple"];
+            }
+            
+            annotation.coordinate = coordinate;
+            annotation.title = station.name;
+            annotation.subtitle = [NSString stringWithFormat:@"AQI : %ld",aqi.level ];
+            [_mapView addAnnotation:annotation];
+        }
+    }
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation

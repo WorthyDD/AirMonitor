@@ -236,7 +236,7 @@
         }
         int size;
         if(_monthDate.year == _now.year){
-            size = (int)_monthDate.month;
+            size = (int)_monthDate.month-1;
         }
         else{
             size = 12;
@@ -245,7 +245,7 @@
         [formatter setDateFormat:@"yyyy"];
         NSString *monthDate = [formatter stringFromDate:_monthDate];
         _monthView.dateString = monthDate;
-        NSArray *arr = [_data generateMonthDataWithSize:size-1];
+        NSArray *arr = [_data generateMonthDataWithSize:size];
         _monthView.monthArray = arr;
     }
 }

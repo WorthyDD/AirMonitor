@@ -10,6 +10,10 @@
 			<dict>
 				<key>name</key>
 				<string>Shepherds Bush</string>
+				<key>latitude</key>
+				<real>51.504562567156</real>
+				<key>longitude</key>
+				<real>-0.224670007032</real>
 			</dict>
 		</array>
 	</dict>
@@ -21,24 +25,48 @@
 			<dict>
 				<key>name</key>
 				<string>Cromwell Road</string>
+				<key>latitude</key>
+				<real>51.49550391</real>
+				<key>longitude</key>
+				<real>-0.178809464</real>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.190863311</real>
 				<key>name</key>
 				<string>Earls Court Rd</string>
+				<key>latitude</key>
+				<real>51.49019756</real>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.168397129</real>
+				<key>latitude</key>
+				<real>51.48743685</real>
 				<key>name</key>
 				<string>Kings Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.164337605</real>
+				<key>latitude</key>
+				<real>51.49913951</real>
 				<key>name</key>
 				<string>Knightsbridge</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.213492139585</real>
+				<key>latitude</key>
+				<real>51.521046747604</real>
 				<key>name</key>
 				<string>North Ken</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.21344617</real>
+				<key>latitude</key>
+				<real>51.52106551</real>
 				<key>name</key>
 				<string>North Ken FDMS</string>
 			</dict>
@@ -50,26 +78,50 @@
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.131938</real>
+				<key>latitude</key>
+				<real>51.494681</real>
 				<key>name</key>
 				<string>Horseferry Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.15459</real>
+				<key>latitude</key>
+				<real>51.52254</real>
 				<key>name</key>
 				<string>Marylebone Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.15459</real>
+				<key>latitude</key>
+				<real>51.52254</real>
 				<key>name</key>
 				<string>Marylebone Road FDMS</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.152792701882</real>
+				<key>latitude</key>
+				<real>51.513928740421</real>
 				<key>name</key>
 				<string>Oxford Street</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.116715</real>
+				<key>latitude</key>
+				<real>51.511998</real>
 				<key>name</key>
 				<string>Strand (Northbank BID)</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.14243882074</real>
+				<key>latitude</key>
+				<real>51.497066177578</real>
 				<key>name</key>
 				<string>Victoria</string>
 			</dict>
@@ -81,22 +133,42 @@
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.096106047418</real>
+				<key>latitude</key>
+				<real>51.520225273171</real>
 				<key>name</key>
 				<string>Beech Street</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.104515626338</real>
+				<key>latitude</key>
+				<real>51.514525336231</real>
 				<key>name</key>
 				<string>Farringdon Street</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.07776568175199999</real>
+				<key>latitude</key>
+				<real>51.513847178423</real>
 				<key>name</key>
 				<string>Sir John Cass School</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.087357197956</real>
+				<key>latitude</key>
+				<real>51.509543685391</real>
 				<key>name</key>
 				<string>Upper Thames Street</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.09163399999999999</real>
+				<key>latitude</key>
+				<real>51.510499</real>
 				<key>name</key>
 				<string>Walbrook Wharf</string>
 			</dict>
@@ -142,22 +214,42 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.125848</real>
+				<key>latitude</key>
+				<real>51.522287</real>
 				<key>name</key>
 				<string>Bloomsbury</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>0.129053205283</real>
+				<key>latitude</key>
+				<real>51.527706619465</real>
 				<key>name</key>
 				<string>Euston Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.120194711317</real>
+				<key>latitude</key>
+				<real>51.517367514618</real>
 				<key>name</key>
 				<string>Holborn</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.120194711317</real>
+				<key>latitude</key>
+				<real>51.515532</real>
 				<key>name</key>
 				<string>Shaftesbury Avenue</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.175284</real>
+				<key>latitude</key>
+				<real>51.544219</real>
 				<key>name</key>
 				<string>Swiss Cottage</string>
 			</dict>
@@ -169,10 +261,18 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.125400278485</real>
+				<key>latitude</key>
+				<real>51.583976900771</real>
 				<key>name</key>
 				<string>Priory Park South</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.068218</real>
+				<key>latitude</key>
+				<real>51.599302</real>
 				<key>name</key>
 				<string>Haringey Town Hall</string>
 			</dict>
@@ -184,10 +284,18 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.106989</real>
+				<key>latitude</key>
+				<real>51.557895</real>
 				<key>name</key>
 				<string>Arsenal</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.116146</real>
+				<key>latitude</key>
+				<real>51.555378</real>
 				<key>name</key>
 				<string>Holloway Road</string>
 			</dict>
@@ -199,6 +307,10 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.08491</real>
+				<key>latitude</key>
+				<real>51.526454</real>
 				<key>name</key>
 				<string>Old Street</string>
 			</dict>
@@ -210,18 +322,34 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.008418492656</real>
+				<key>latitude</key>
+				<real>51.515046167401</real>
 				<key>name</key>
 				<string>Blackwall</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.04215509919</real>
+				<key>latitude</key>
+				<real>51.522529486084</real>
 				<key>name</key>
 				<string>Mile End Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.012976930943</real>
+				<key>latitude</key>
+				<real>51.4891342634</real>
 				<key>name</key>
 				<string>Millwall Park</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.033307388878</real>
+				<key>latitude</key>
+				<real>51.540519491524</real>
 				<key>name</key>
 				<string>Victoria Park</string>
 			</dict>
@@ -233,14 +361,26 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.020266</real>
+				<key>latitude</key>
+				<real>51.445468</real>
 				<key>name</key>
 				<string>Catford, Loampit Vale</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.016068243204</real>
+				<key>latitude</key>
+				<real>51.464691061174</real>
 				<key>name</key>
 				<string>Mercury Way</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.039641</real>
+				<key>latitude</key>
+				<real>51.474954</real>
 				<key>name</key>
 				<string>New Cross</string>
 			</dict>
@@ -252,10 +392,18 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>0.059552893257</real>
+				<key>latitude</key>
+				<real>51.480499493647</real>
 				<key>name</key>
 				<string>A2 Old Kent Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.101527038275</real>
+				<key>latitude</key>
+				<real>51.493155704867</real>
 				<key>name</key>
 				<string>Elephant and Castle</string>
 			</dict>
@@ -267,14 +415,26 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.124545234819</real>
+				<key>latitude</key>
+				<real>51.485486773973</real>
 				<key>name</key>
 				<string>Bondway Interchange</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.114581026951</real>
+				<key>latitude</key>
+				<real>51.464113541162</real>
 				<key>name</key>
 				<string>Brixton Road</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.131868638796</real>
+				<key>latitude</key>
+				<real>51.42821314295</real>
 				<key>name</key>
 				<string>Streatham Green</string>
 			</dict>
@@ -286,26 +446,50 @@ Camden</string>
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>longitude</key>
+				<real>-0.141786953606</real>
+				<key>latitude</key>
+				<real>51.479439528122</real>
 				<key>name</key>
 				<string>Battersea</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.215824580948</real>
+				<key>latitude</key>
+				<real>51.465032505912</real>
 				<key>name</key>
 				<string>Putney</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.215871</real>
+				<key>latitude</key>
+				<real>51.463429</real>
 				<key>name</key>
 				<string>Putney High Street</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.215890144123</real>
+				<key>latitude</key>
+				<real>51.463720604719</real>
 				<key>name</key>
 				<string>Putney High Street Façade</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.166524</real>
+				<key>latitude</key>
+				<real>51.429331</real>
 				<key>name</key>
 				<string>Tooting High Street</string>
 			</dict>
 			<dict>
+				<key>longitude</key>
+				<real>-0.191074</real>
+				<key>latitude</key>
+				<real>51.456962</real>
 				<key>name</key>
 				<string>Wandsworth Town Hall</string>
 			</dict>

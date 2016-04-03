@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "AQIIndex.h"
+#import <MapKit/MapKit.h>
 
 @interface MonitoringStation : NSObject
 
 @property (nonatomic) NSString *name;
-
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 //污染物指数
 @property (nonatomic) AQIIndex *PM25;
