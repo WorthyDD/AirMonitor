@@ -105,7 +105,7 @@
             
             annotation.coordinate = coordinate;
             annotation.title = station.name;
-            annotation.subtitle = [NSString stringWithFormat:@"AQI : %ld",aqi.level ];
+            annotation.subtitle = [NSString stringWithFormat:@"AQI : %ld  Level : %ld",aqi.level,aqi.rank];
             [_mapView addAnnotation:annotation];
         }
     }
