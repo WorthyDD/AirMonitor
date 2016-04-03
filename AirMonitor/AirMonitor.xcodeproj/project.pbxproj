@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CC070D0E1CA7E27900D09C0C /* AQIIndexCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = CC070D0D1CA7E27900D09C0C /* AQIIndexCollection.m */; };
 		CC070D111CA7E99400D09C0C /* NSDate+Day.m in Sources */ = {isa = PBXBuildFile; fileRef = CC070D101CA7E99400D09C0C /* NSDate+Day.m */; };
+		CCBDD0C81CB0A645005A2E20 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDD0C71CB0A645005A2E20 /* MapViewController.m */; };
+		CCBDD0CA1CB0A881005A2E20 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCBDD0C91CB0A881005A2E20 /* MapKit.framework */; };
+		CCBDD0CD1CB0B203005A2E20 /* WXAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDD0CC1CB0B203005A2E20 /* WXAnnotation.m */; };
 		CCE194F01CA5626600C90EBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE194EF1CA5626600C90EBE /* main.m */; };
 		CCE194F31CA5626600C90EBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE194F21CA5626600C90EBE /* AppDelegate.m */; };
 		CCE194FE1CA5626600C90EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE194FD1CA5626600C90EBE /* Assets.xcassets */; };
@@ -56,6 +59,11 @@
 		CC070D0D1CA7E27900D09C0C /* AQIIndexCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQIIndexCollection.m; sourceTree = "<group>"; };
 		CC070D0F1CA7E99400D09C0C /* NSDate+Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Day.h"; path = "Tool/NSDate+Day.h"; sourceTree = "<group>"; };
 		CC070D101CA7E99400D09C0C /* NSDate+Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Day.m"; path = "Tool/NSDate+Day.m"; sourceTree = "<group>"; };
+		CCBDD0C61CB0A645005A2E20 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		CCBDD0C71CB0A645005A2E20 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		CCBDD0C91CB0A881005A2E20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CCBDD0CB1CB0B203005A2E20 /* WXAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAnnotation.h; sourceTree = "<group>"; };
+		CCBDD0CC1CB0B203005A2E20 /* WXAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAnnotation.m; sourceTree = "<group>"; };
 		CCE194EB1CA5626600C90EBE /* AirMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE194EF1CA5626600C90EBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCE194F11CA5626600C90EBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBDD0CA1CB0A881005A2E20 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +140,7 @@
 		CCE194E21CA5626600C90EBE = {
 			isa = PBXGroup;
 			children = (
+				CCBDD0C91CB0A881005A2E20 /* MapKit.framework */,
 				CCE194ED1CA5626600C90EBE /* AirMonitor */,
 				CCE1950A1CA5626600C90EBE /* AirMonitorTests */,
 				CCE195151CA5626600C90EBE /* AirMonitorUITests */,
@@ -202,6 +212,8 @@
 				CCF2F9A31CA6142400159628 /* SelectMonitoringStationViewController.m */,
 				CCF2F9BA1CA6877C00159628 /* HistoryDataViewController.h */,
 				CCF2F9BB1CA6877C00159628 /* HistoryDataViewController.m */,
+				CCBDD0C61CB0A645005A2E20 /* MapViewController.h */,
+				CCBDD0C71CB0A645005A2E20 /* MapViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -232,6 +244,8 @@
 				CCF2F9A81CA614A300159628 /* MonitoringStationSectionView.xib */,
 				CCF2F9C01CA691AD00159628 /* DataView.h */,
 				CCF2F9C11CA691AD00159628 /* DataView.m */,
+				CCBDD0CB1CB0B203005A2E20 /* WXAnnotation.h */,
+				CCBDD0CC1CB0B203005A2E20 /* WXAnnotation.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -395,6 +409,7 @@
 				CCE1953F1CA563C500C90EBE /* UIView+Gap.m in Sources */,
 				CCF2F9A71CA6148E00159628 /* MonitoringStationSectionView.m in Sources */,
 				CCF2F9B91CA633BC00159628 /* AQIIndex.m in Sources */,
+				CCBDD0CD1CB0B203005A2E20 /* WXAnnotation.m in Sources */,
 				CCF2F9B31CA6186600159628 /* MonitoringStation.m in Sources */,
 				CCE194F31CA5626600C90EBE /* AppDelegate.m in Sources */,
 				CCE195411CA563C500C90EBE /* UIView+IBInspect.m in Sources */,
@@ -404,6 +419,7 @@
 				CC070D111CA7E99400D09C0C /* NSDate+Day.m in Sources */,
 				CCF2F9B61CA626B800159628 /* UIColor+TAToolkit.m in Sources */,
 				CCE195401CA563C500C90EBE /* UIView+Geometry.m in Sources */,
+				CCBDD0C81CB0A645005A2E20 /* MapViewController.m in Sources */,
 				CC070D0E1CA7E27900D09C0C /* AQIIndexCollection.m in Sources */,
 				CCE194F01CA5626600C90EBE /* main.m in Sources */,
 			);
