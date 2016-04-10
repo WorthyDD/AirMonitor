@@ -43,6 +43,10 @@
 {
     [super viewWillAppear:animated];
     [self.titleLabel setText:[ConstantManager shareManager].currentStation.name];
+    NSInteger days = [_now daysSinceDay:_hourDate];
+    _now = [NSDate date];
+    _hourDate = [_now dayByAddingDays:-days];
+    
 }
 
 - (void) initView
@@ -192,7 +196,7 @@
         int size;
         if(_hourDate.day == _now.day){
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-            [formatter setDateFormat:@"HH"];
+            [formatter setDateFormat:@"hh"];
             NSString *hourStr = [formatter stringFromDate:_hourDate];
             size = [hourStr intValue];
         }
