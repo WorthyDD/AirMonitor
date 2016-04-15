@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "ConstantManager.h"
 #import "Tool.h"
+#import "APIRequest.h"
+#import "APIRequestOperationManager.h"
 
 @interface AirQualityViewController : UITableViewController
 
+
+@property (nonatomic) MonitoringStation *station;
 @end

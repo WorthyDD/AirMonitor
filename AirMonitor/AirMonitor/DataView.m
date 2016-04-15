@@ -8,7 +8,7 @@
 
 #import "DataView.h"
 
-#define MAX_LEVEL 1200
+#define MAX_LEVEL 600
 
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -188,10 +188,10 @@
                 
                 CGFloat MAX = 0;
                 if(_aqiType == PM10 || _aqiType == O3 || _aqiType == PM25){
-                    MAX = 300.0;
+                    MAX = 100.0;
                 }
                 else{
-                    MAX = 1000.0;
+                    MAX = 500;
                 }
                 
                 CGFloat height = (HEIGHT-100-bottom)*(aqi.level/(float)MAX);
@@ -226,10 +226,10 @@
             //update num label
             CGFloat MAX = 0;
             if(_aqiType == PM10 || _aqiType == O3 || _aqiType == PM25){
-                MAX = 300.0;
+                MAX = 100;
             }
             else{
-                MAX = 1000.0;
+                MAX = 500;
             }
             if(_stringLabels){
                 for(int i = 0; i<_stringLabels.count;i++){
@@ -298,7 +298,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     if(_dataType != DataTypeMonth){
         
-        CGFloat MAX = 1000.0;
+        CGFloat MAX = 500.0;
         if(!_stringLabels){
             
             _stringLabels = [[NSMutableArray alloc]init];

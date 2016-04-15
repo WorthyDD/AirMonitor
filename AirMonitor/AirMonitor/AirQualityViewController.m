@@ -41,7 +41,7 @@ static NSString *kAddMonitoringStationSegue = @"addMonitorSegue";
 
 
 
-@property (nonatomic) NSArray *cityArray;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *adviceTitle1;
 @property (weak, nonatomic) IBOutlet UILabel *adviceTitle2;
@@ -60,16 +60,31 @@ static NSString *kAddMonitoringStationSegue = @"addMonitorSegue";
 {
     [super viewDidLoad];
     
-    _cityArray = [ConstantManager shareManager].cityArray;
-    City *city = [_cityArray firstObject];
-    MonitoringStation *stattion = [city.monitoringStationArray firstObject];
-    [self.districtLabel setText:stattion.name];
-    [ConstantManager shareManager].currentCity = city;
-    [ConstantManager shareManager].currentStation = stattion;
+
     
     UIImageView *bgImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
     bgImage.frame = [UIScreen mainScreen].bounds;
     self.tableView.backgroundView = bgImage;
+    
+    
+    
+}
+
+
+- (void) testAPIManager
+{
+    APIRequest *request = [[APIRequest alloc]initWithAPIPath:@"/AirQuality/Information/Species/Json" method:APIRequestMethodGet];
+    APIRequestOperationManager *manager = [APIRequestOperationManager shareManager];
+    [manager requestAPI:request comletion:^(id result, NSError *error) {
+        
+        
+        if(error){
+            NSLog(@"\n\nerror--> %@",error);
+        }
+        if(result){
+            NSLog(@"\n\n result--> %@", result);
+        }
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -81,60 +96,57 @@ static NSString *kAddMonitoringStationSegue = @"addMonitorSegue";
 
 - (void) reloadData
 {
-    if([ConstantManager shareManager].currentStation){
-        MonitoringStation *stattion = [ConstantManager shareManager].currentStation;
-        [self.districtLabel setText:stattion.name];
+   
+    [self.districtLabel setText:_station.name];
         
-        //生成污染物指数
-        [stattion getAQIIndex];
-        [self.pm25Label setText:[NSString stringWithFormat:@"%ld",stattion.PM25.level]];
-        [self.pm10Label setText:[NSString stringWithFormat:@"%ld",stattion.PM10.level]];
-        [self.o3Label setText:[NSString stringWithFormat:@"%ld",stattion.O3.level]];
-        [self.no2Label setText:[NSString stringWithFormat:@"%ld",stattion.NO2.level]];
-        [self.so2Label setText:[NSString stringWithFormat:@"%ld",stattion.SO2.level]];
-        
-        //污染物等级
-        [self.pm25TipLabel setText:[NSString stringWithFormat:@"Level%ld",stattion.PM25.rank]];
-        [self.pm10TipLabel setText:[NSString stringWithFormat:@"Level%ld",stattion.PM10.rank]];
-        [self.o3TipLabel setText:[NSString stringWithFormat:@"Level%ld",stattion.O3.rank]];
-        [self.no2TipLabel setText:[NSString stringWithFormat:@"Level%ld",stattion.NO2.rank]];
-        [self.so2TipLabel setText:[NSString stringWithFormat:@"Level%ld",stattion.SO2.rank]];
-        
-        //颜色
-        [self.pm25TipLabel setBackgroundColor:[UIColor colorWithHexString:stattion.PM25.colorStr]];
-        [self.pm10TipLabel setBackgroundColor:[UIColor colorWithHexString:stattion.PM10.colorStr]];
-        [self.o3TipLabel setBackgroundColor:[UIColor colorWithHexString:stattion.O3.colorStr]];
-        [self.no2TipLabel setBackgroundColor:[UIColor colorWithHexString:stattion.NO2.colorStr]];
-        [self.so2TipLabel setBackgroundColor:[UIColor colorWithHexString:stattion.SO2.colorStr]];
-        
-        //主要污染物
-        [self.mainAQILabel setText:[NSString stringWithFormat:@"%ld", stattion.mainAQI.level]];
-        [self.mainAQIView setBackgroundColor:[UIColor colorWithHexString:stattion.mainAQI.colorStr]];
-        
-        if(stattion.mainAQI.rank<=6){
-            [_adviceSubTitle1 setText:@"Suitable"];
-            [_adviceSubTitle2 setText:@"Unnecessary"];
-            [_adviceSubTitle3 setText:@"Suitable For Outdoor Activities"];
-            
-        }
-        else{
-            
-            [_adviceSubTitle1 setText:@"Unsuitable"];
-            [_adviceSubTitle2 setText:@"Necessary"];
-            [_adviceSubTitle3 setText:@"Unsuitable For Outdoor Activities"];
-        }
+    //生成污染物指数
+    [self.pm25Label setText:[NSString stringWithFormat:@"%ld",_station.PM25.level]];
+    [self.pm10Label setText:[NSString stringWithFormat:@"%ld",_station.PM10.level]];
+    [self.o3Label setText:[NSString stringWithFormat:@"%ld",_station.O3.level]];
+    [self.no2Label setText:[NSString stringWithFormat:@"%ld",_station.NO2.level]];
+    [self.so2Label setText:[NSString stringWithFormat:@"%ld",_station.SO2.level]];
+    
+    //污染物等级
+    [self.pm25TipLabel setText:[NSString stringWithFormat:@"Level%ld",_station.PM25.rank]];
+    [self.pm10TipLabel setText:[NSString stringWithFormat:@"Level%ld",_station.PM10.rank]];
+    [self.o3TipLabel setText:[NSString stringWithFormat:@"Level%ld",_station.O3.rank]];
+    [self.no2TipLabel setText:[NSString stringWithFormat:@"Level%ld",_station.NO2.rank]];
+    [self.so2TipLabel setText:[NSString stringWithFormat:@"Level%ld",_station.SO2.rank]];
+    
+    //颜色
+    [self.pm25TipLabel setBackgroundColor:[UIColor colorWithHexString:_station.PM25.colorStr]];
+    [self.pm10TipLabel setBackgroundColor:[UIColor colorWithHexString:_station.PM10.colorStr]];
+    [self.o3TipLabel setBackgroundColor:[UIColor colorWithHexString:_station.O3.colorStr]];
+    [self.no2TipLabel setBackgroundColor:[UIColor colorWithHexString:_station.NO2.colorStr]];
+    [self.so2TipLabel setBackgroundColor:[UIColor colorWithHexString:_station.SO2.colorStr]];
+    
+    //主要污染物
+    [self.mainAQILabel setText:[NSString stringWithFormat:@"%ld", _station.mainAQI.level]];
+    [self.mainAQIView setBackgroundColor:[UIColor colorWithHexString:_station.mainAQI.colorStr]];
+    
+    if(_station.mainAQI.rank<=6){
+        [_adviceSubTitle1 setText:@"Suitable"];
+        [_adviceSubTitle2 setText:@"Unnecessary"];
+        [_adviceSubTitle3 setText:@"Suitable For Outdoor Activities"];
         
     }
+    else{
+        
+        [_adviceSubTitle1 setText:@"Unsuitable"];
+        [_adviceSubTitle2 setText:@"Necessary"];
+        [_adviceSubTitle3 setText:@"Unsuitable For Outdoor Activities"];
+    }
+    
+    
     
     //temperature 0-30
     
-    NSInteger tem = arc4random()%30;
     NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSString *timeStr = [formatter stringFromDate:date];
     [self.dateLabel setText:[NSString stringWithFormat:@"Update on %@",timeStr]];
-    [self.temLabel setText:[NSString stringWithFormat: @"Temperature : %ld°C",tem]];
+    [self.temLabel setText:[NSString stringWithFormat: @"Temperature : %ld°C",_station.temperature]];
     
     
 }

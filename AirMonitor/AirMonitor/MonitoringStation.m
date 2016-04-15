@@ -93,11 +93,34 @@
         _SO2.level10 = 1200;
     }
     
-    _PM25.level = arc4random()%_PM25.level10;
-    _PM10.level = arc4random()%_PM10.level10;
-    _O3.level = arc4random()%_O3.level10;
-    _NO2.level = arc4random()%_NO2.level10;
-    _SO2.level = arc4random()%_SO2.level10;
+    
+    _NO2.averageLavel = 134+arc4random()%60-30;
+    _PM10.averageLavel = 30 +arc4random()%20-10;
+    
+    int tem = arc4random()%10;
+    if(tem<3){
+        _NO2.level = _NO2.averageLavel+ arc4random()%20-20;
+        _O3.level = 27+arc4random()%10-10;
+        _PM10.level = 18+arc4random()%10-10;
+        _PM25.level = 17+arc4random()%10-10;
+        _SO2.level = 10+arc4random()%10-10;
+        
+    }
+    else if(tem < 8){
+        _NO2.level = _NO2.averageLavel+arc4random()%30;
+        _O3.level = 27+arc4random()%20;
+        _PM10.level = 18+arc4random()%20;
+        _PM25.level = 17+arc4random()%20;
+        _SO2.level = 10 +arc4random()%10;
+        
+    }
+    else{
+        _NO2.level = 57+arc4random()%30+30;
+        _O3.level = 27+arc4random()%30+20;
+        _PM10.level = 18+arc4random()%30+20;
+        _PM25.level = 17+arc4random()%30+20;
+        _SO2.level = 10+arc4random()%30+10;
+    }
     
     
     _mainAQI = _PM25;
@@ -113,6 +136,8 @@
     if(_mainAQI.level < _SO2.level){
         _mainAQI = _SO2;
     }
+    
+    _temperature = 15+arc4random()%5;
     
 }
 

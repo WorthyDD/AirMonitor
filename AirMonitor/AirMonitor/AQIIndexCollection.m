@@ -87,11 +87,32 @@
             _SO2.level10 = 1200;
         }
         
-        _PM25.level = arc4random()%_PM25.level10;
-        _PM10.level = arc4random()%_PM10.level10;
-        _O3.level = arc4random()%_O3.level10;
-        _NO2.level = arc4random()%_NO2.level10;
-        _SO2.level = arc4random()%_SO2.level10;
+        int tem = arc4random()%10;
+        
+        if(tem<3){
+            _NO2.level = 57+ arc4random()%20-15;
+            _O3.level = 27+arc4random()%10-17;
+            _PM10.level = 18+arc4random()%5-8;
+            _PM25.level = 17+arc4random()%7-9;
+            _SO2.level = 4+arc4random()%2-2;
+            
+        }
+        else if(tem < 8){
+            _NO2.level = 57+arc4random()%15-5;
+            _O3.level = 27+arc4random()%27-7;
+            _PM10.level = 18+arc4random()%7+3;
+            _PM25.level = 17+arc4random()%12-2;
+            _SO2.level = 4 +arc4random()%5+3;
+            
+        }
+        else{
+            _NO2.level = 57+arc4random()%10+10;
+            _O3.level = 27+arc4random()%16+20;
+            _PM10.level = 18+arc4random()%7+10;
+            _PM25.level = 17+arc4random()%8+10;
+            _SO2.level = 4+arc4random()%2+8;
+        }
+
         
         
         _mainAQI = _PM25;
