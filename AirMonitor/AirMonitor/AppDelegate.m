@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ConstantManager.h"
+#import "City.h"
+#import "MonitoringStation.h"
+#import "MainPageTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    //获取本地site列表
+    NSArray *sitesName = [[NSUserDefaults standardUserDefaults] objectForKey:kMySitesArray];
+    NSLog(@"\n\n read sites--> %@", sitesName);
+    //同步列表的选择状态
+    for(NSString *steName in sitesName){
+        for(City *city in [ConstantManager shareManager].cityArray){
+            for(MonitoringStation *station1 in city.monitoringStationArray){
+                if([station1.name isEqualToString:steName]){
+                    station1.selected = YES;
+                }
+            }
+        }
+    }
+
     return YES;
 }
 
@@ -40,6 +60,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"appWillTerminite" object:nil];
 }
 
 @end

@@ -15,6 +15,8 @@
 
 ////污染值
 @property (nonatomic, assign) NSInteger level;
+
+@property (nonatomic, assign) NSInteger averageLavel;
 //所处等级
 
 @property (nonatomic, assign) NSInteger rank;

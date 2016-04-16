@@ -8,6 +8,10 @@
 		<key>Monitor Point</key>
 		<array>
 			<dict>
+				<key>PM10</key>
+				<integer>25</integer>
+				<key>NO2</key>
+				<integer>64</integer>
 				<key>name</key>
 				<string>Shepherds Bush</string>
 				<key>latitude</key>

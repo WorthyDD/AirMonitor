@@ -7,6 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MainPageTableViewController.h"
+#import "AirQualityViewController.h"
+#import "HistoryDataViewController.h"
+#import "MapViewController.h"
+#import "SelectMonitoringStationViewController.h"
 
 @interface AirMonitorUITests : XCTestCase
 
@@ -36,5 +41,7 @@
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
+
+
 
 @end

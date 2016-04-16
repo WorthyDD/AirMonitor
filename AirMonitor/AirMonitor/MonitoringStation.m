@@ -93,13 +93,49 @@
         _SO2.level10 = 1200;
     }
     
-    _PM25.level = arc4random()%_PM25.level10;
-    _PM10.level = arc4random()%_PM10.level10;
-    _O3.level = arc4random()%_O3.level10;
-    _NO2.level = arc4random()%_NO2.level10;
-    _SO2.level = arc4random()%_SO2.level10;
     
+    _NO2.averageLavel = 94;         //25  500
+    _PM25.averageLavel = 30;        //10  80
+    _PM10.averageLavel =  30;       //10, 80
+    _O3.averageLavel = 90;          // 30   200
+    _SO2.averageLavel = 180;        //30    800
     
+    int tem = arc4random()%100;
+    if(tem <= 10){
+        _PM25.level = _PM25.averageLavel - 10 - arc4random()%20;
+        _PM10.level = _PM10.averageLavel-10-arc4random()%20;
+        _O3.level = _O3.averageLavel - 30- arc4random()%30;
+        _NO2.level = _NO2.averageLavel- 30-arc4random()%30;
+        _SO2.level = _SO2.averageLavel- 80- arc4random()%30;
+    }
+    else if(tem <= 30){
+        _PM25.level = _PM25.averageLavel - 20 + arc4random()%20;
+        _PM10.level = _PM10.averageLavel-20+arc4random()%20;
+        _O3.level = _O3.averageLavel - 30+arc4random()%30;
+        _NO2.level = _NO2.averageLavel- 30+arc4random()%30;
+        _SO2.level = _SO2.averageLavel- 80+ arc4random()%80;
+    }
+    else if(tem <= 70){
+        _PM25.level = _PM25.averageLavel + arc4random()%20;
+        _PM10.level = _PM10.averageLavel+arc4random()%20;
+        _O3.level = _O3.averageLavel + arc4random()%30;
+        _NO2.level = _NO2.averageLavel+arc4random()%30;
+        _SO2.level = _SO2.averageLavel+arc4random()%80;
+    }
+    else if(tem <= 90){
+        _PM25.level = _PM25.averageLavel + 10 +arc4random()%20;
+        _PM10.level = _PM10.averageLavel+10 +arc4random()%20;
+        _O3.level = _O3.averageLavel + 30 + arc4random()%30;
+        _NO2.level = _NO2.averageLavel+30 +arc4random()%30;
+        _SO2.level = _SO2.averageLavel+80 +arc4random()%80;
+    }
+    else{
+        _PM25.level = _PM25.averageLavel + 30 +arc4random()%20;
+        _PM10.level = _PM10.averageLavel+30 +arc4random()%20;
+        _O3.level = _O3.averageLavel + 50 + arc4random()%30;
+        _NO2.level = _NO2.averageLavel+60 +arc4random()%30;
+        _SO2.level = _SO2.averageLavel+100 +arc4random()%50;
+    }
     _mainAQI = _PM25;
     if(_mainAQI.level<_PM10.level){
         _mainAQI = _PM10;
@@ -113,6 +149,8 @@
     if(_mainAQI.level < _SO2.level){
         _mainAQI = _SO2;
     }
+    
+    _temperature = 15+arc4random()%10;
     
 }
 

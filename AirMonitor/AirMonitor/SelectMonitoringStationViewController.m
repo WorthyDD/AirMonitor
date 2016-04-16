@@ -56,7 +56,7 @@
     MonitoringStation *station = city.monitoringStationArray[indexPath.row];
     [cell.textLabel setText:station.name];
     
-    if([station isEqual:[ConstantManager shareManager].currentStation]){
+    if(station.selected){
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
     }
     else{
@@ -68,12 +68,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+    
     City *city = _cityArray[indexPath.section];
     MonitoringStation *station = city.monitoringStationArray[indexPath.row];
-    [ConstantManager shareManager].currentCity = city;
-    [ConstantManager shareManager].currentStation = station;
-    [tableView reloadData];
+    station.selected = !station.selected;
+//    [tableView reloadData];
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
 }
 
 /*

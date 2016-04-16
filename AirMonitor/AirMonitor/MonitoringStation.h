@@ -25,9 +25,14 @@
 //最主要污染物
 @property (nonatomic) AQIIndex *mainAQI;
 
+//温度
+@property (nonatomic, assign) NSInteger temperature;
+
 /**
  * 生成随机的值
  */
 - (void) getAQIIndex;
+
+@property (nonatomic, assign) BOOL selected;
 
 @end
