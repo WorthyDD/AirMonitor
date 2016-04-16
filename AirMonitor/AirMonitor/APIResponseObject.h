@@ -1,10 +1,4 @@
-//
-//  APIObject.h
-//  PersonalTravel
-//
-//  Created by Hale Chan on 15/1/26.
-//  Copyright (c) 2015年 Tips4app Inc. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 
