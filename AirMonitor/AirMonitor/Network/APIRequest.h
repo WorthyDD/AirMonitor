@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APIResponseObject.h"
 
 typedef NS_ENUM(NSInteger, APIRequestMethod) {
     APIRequestMethodGet,
@@ -49,6 +50,18 @@ typedef NS_ENUM(NSInteger, APIRequestMethod) {
 @property (nonatomic, strong) NSArray *uploadFilesParameters;
 
 /**
+ *  API请求完成后，需要将返回数据解析成的对象类型
+ */
+@property (nonatomic, strong) Class<APIResponseObject> resultObjectClass;
+
+/**
+ *  自定义的返回数据解析器
+ *
+ *  @notice 如果指定该属性，则resultObjectClass会被忽略
+ */
+@property (nonatomic, copy) id(^resultParser)(id object);
+
+/**
  *  初始化一个request
  */
 
@@ -82,6 +95,7 @@ typedef NS_ENUM(NSInteger, APIRequestMethod) {
  *  MINE类型，如果不指定，则根据fileName和fileURL推断
  */
 @property (nonatomic, copy) NSString *mineType;
+
 
 - (instancetype)initWithFilePath:(NSString *)filePath;
 - (instancetype)initWithName:(NSString *)name fileName:(NSString *)fileName data:(NSData *)data mineType:(NSString *)mineType;

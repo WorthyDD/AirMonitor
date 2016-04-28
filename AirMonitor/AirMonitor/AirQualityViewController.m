@@ -59,9 +59,6 @@ static NSString *kAddMonitoringStationSegue = @"addMonitorSegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-
-    
     UIImageView *bgImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
     bgImage.frame = [UIScreen mainScreen].bounds;
     self.tableView.backgroundView = bgImage;

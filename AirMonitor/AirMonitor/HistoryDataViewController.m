@@ -8,7 +8,7 @@
 
 #import "HistoryDataViewController.h"
 
-@interface HistoryDataViewController ()
+@interface HistoryDataViewController ()<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *AQIButtons;     //tag 1-6
 
@@ -26,6 +26,8 @@
 @property (nonatomic) NSDate *monthDate;
 
 @property (nonatomic) HistoryData *data;
+@property (nonatomic) NSMutableArray *sitesArray;
+@property (nonatomic) MonitoringStation *currentSite;
 
 @end
 
@@ -34,18 +36,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self initView];
     [self initData];
+   _sitesArray = [[NSMutableArray alloc]init];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.titleLabel setText:[ConstantManager shareManager].currentStation.name];
+    
+    [_sitesArray removeAllObjects];
+    for(City *city in [ConstantManager shareManager].cityArray){
+        for(MonitoringStation *station in city.monitoringStationArray){
+            if(station.selected){
+                [_sitesArray addObject:station];
+            }
+        }
+    }
+    if(_sitesArray.count == 0){
+        [self setTitle:@""];
+        return;
+    }
+    if(!_currentSite || ![_sitesArray containsObject:_currentSite]){
+        _currentSite = [_sitesArray firstObject];
+        [self initData];
+    }
+    [self.titleLabel setText:_currentSite.name];
     NSInteger days = [_now daysSinceDay:_hourDate];
     _now = [NSDate date];
     _hourDate = [_now dayByAddingDays:-days];
+
     
 }
 
@@ -55,6 +75,12 @@
     _hourView.hidden = NO;
     _dayView.hidden = YES;
     _monthView.hidden = YES;
+    _hourView.dataType = DataTypeHour;
+    _dayView.dataType = DataTypeDay;
+    _monthView.dataType = DataTypeMonth;
+    _hourView.aqiType = AQI;
+    _dayView.aqiType = AQI;
+    _monthView.aqiType = AQI;
     [self refreshButtons];
 }
 
@@ -78,6 +104,8 @@
         _data = [[HistoryData alloc]init];
     }
     
+    
+    
     NSDate *now = [NSDate date];
     _now =now;
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -98,12 +126,7 @@
     NSArray *monthArray = [_data generateMonthDataWithSize:month-1];
     _monthView.monthArray = monthArray;
     
-    _hourView.dataType = DataTypeHour;
-    _dayView.dataType = DataTypeDay;
-    _monthView.dataType = DataTypeMonth;
-    _hourView.aqiType = AQI;
-    _dayView.aqiType = AQI;
-    _monthView.aqiType = AQI;
+
     
     [formatter setDateFormat:@"yyyy-MM-dd"];
     _hourDate = now;
@@ -273,6 +296,27 @@
         return 28;
     return 29;
 }
+
+
+
+- (IBAction)tapSwitchSiteButton:(id)sender {
+    
+    if(_sitesArray.count==0){
+        return;
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Switch Site" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    __weak typeof (self) weakSelf = self;
+    for(MonitoringStation *site in _sitesArray){
+        [alert addAction:[UIAlertAction actionWithTitle:site.name style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            weakSelf.currentSite = site;
+            [weakSelf.titleLabel setText:site.name];
+            [weakSelf initData];
+        }]];
+    }
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancle" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

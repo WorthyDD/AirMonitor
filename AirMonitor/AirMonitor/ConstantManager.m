@@ -51,4 +51,23 @@
     return _cityArray;
 }
 
+
+- (void)reloadMonitorList
+{
+    APIRequest *request = [APIManager getMonitorSitesListAPI];
+    APIRequestOperationManager *manager = [APIRequestOperationManager shareManager];
+    [manager requestAPI:request comletion:^(id result, NSError *error) {
+        
+        
+        if(error){
+            NSLog(@"\n\nerror--> %@",error);
+        }
+        if(result){
+            NSLog(@"\n\n result--> %@", result);
+            
+            NSArray *monitorList = result;
+        }
+    }];
+}
+
 @end

@@ -62,12 +62,38 @@ NSString *const kAPIRequestOperationManagerErrorInfoServerDataKey = @"serverData
             }
         }
         else{
-            //成功
-            //NSLog(@"\n\n获取网络数据---> %@\n\n", responseObject);
-            
-            if(completion){
-                completion(responseObject ,nil);
+            id jsonObj = [responseObject valueForKey:@"data"];
+            id result;
+            //有自定义parser的，使用parser处理
+            if (api.resultParser) {
+                result = api.resultParser(jsonObj);
             }
+            else if(api.resultObjectClass){
+                //如果是数组，需要对它的元素单独处理
+                if ([jsonObj isKindOfClass:[NSArray class]]) {
+                    NSArray *jsonArray = jsonObj;
+                    NSMutableArray *items = [NSMutableArray array];
+                    for (id element in jsonArray) {
+                        id item = [api.resultObjectClass objectWithJSONObject:element];
+                        if (item) {
+                            [items addObject:item];
+                        }
+                    }
+                    result = [NSArray arrayWithArray:items];
+                }
+                //其它类型，直接调用objectWithJSONObject生成对象
+                else {
+                    result = [api.resultObjectClass objectWithJSONObject:jsonObj];
+                }
+            }
+            else {
+                result = jsonObj?:responseObject;
+            }
+            
+            if (completion) {
+                completion(result, nil);
+            }
+
             
         }
     };

@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "APIRequest.h"
 #import "APIRequestOperationManager.h"
+#import "APIManager.h"
+#import "MonitoringStation.h"
+#import "ConstantManager.h"
 
 @interface AirMonitorTests : XCTestCase
 
@@ -43,6 +46,8 @@
 
 
 
+// 网络接口测试
+
 - (void) testAPIRequest
 {
     
@@ -61,5 +66,58 @@
     
     
 }
+
+- (void) testSiteListAPI
+{
+    APIRequest *request = [APIManager getMonitorSitesListAPI];
+    [[APIRequestOperationManager shareManager] requestAPI:request comletion:^(id result, NSError *error) {
+        if(error){
+            NSLog(@"\n\nerror--> %@",error);
+        }
+        if(result){
+            NSLog(@"\n\n result--> %@", result);
+        }
+    }];
+}
+
+- (void) testAQIList
+{
+    APIRequest *request = [APIManager getAQIDataWithSitesCode:201 speciesCode:12 date:@"2015-12-03"];
+    [[APIRequestOperationManager shareManager] requestAPI:request comletion:^(id result, NSError *error) {
+        if(error){
+            NSLog(@"\n\nerror--> %@",error);
+        }
+        if(result){
+            NSLog(@"\n\n result--> %@", result);
+        }
+    }];
+}
+
+- (void) testAQIList2
+{
+    APIRequest *request = [APIManager getAQIDataWithSitesCode:23 speciesCode:12 fromDate:@"2015-12-03" toDate:@"2016-04-12"];
+    [[APIRequestOperationManager shareManager] requestAPI:request comletion:^(id result, NSError *error) {
+        if(error){
+            NSLog(@"\n\nerror--> %@",error);
+        }
+        if(result){
+            NSLog(@"\n\n result--> %@", result);
+        }
+    }];
+}
+
+
+- (void) testGenerateData{
+    
+    MonitoringStation *station = [[MonitoringStation alloc]init];
+    [station getAQIIndex];
+}
+
+- (void) testSitesListAPI
+{
+    [[ConstantManager shareManager] reloadMonitorList];
+    NSArray *arr = [ConstantManager shareManager].cityArray;
+}
+
 
 @end

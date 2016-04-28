@@ -29,6 +29,7 @@
 		CC94D2011CC07D61006E42F0 /* NSString+Toolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = CC94D2001CC07D61006E42F0 /* NSString+Toolkit.m */; };
 		CCBDD0C81CB0A645005A2E20 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDD0C71CB0A645005A2E20 /* MapViewController.m */; };
 		CCBDD0CD1CB0B203005A2E20 /* WXAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDD0CC1CB0B203005A2E20 /* WXAnnotation.m */; };
+		CCD704861CC2190F008F2EF2 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD704851CC2190F008F2EF2 /* APIManager.m */; };
 		CCE194F01CA5626600C90EBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE194EF1CA5626600C90EBE /* main.m */; };
 		CCE194F31CA5626600C90EBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE194F21CA5626600C90EBE /* AppDelegate.m */; };
 		CCE194FE1CA5626600C90EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE194FD1CA5626600C90EBE /* Assets.xcassets */; };
@@ -121,6 +122,8 @@
 		CCBDD0C91CB0A881005A2E20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCBDD0CB1CB0B203005A2E20 /* WXAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAnnotation.h; sourceTree = "<group>"; };
 		CCBDD0CC1CB0B203005A2E20 /* WXAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAnnotation.m; sourceTree = "<group>"; };
+		CCD704841CC2190F008F2EF2 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		CCD704851CC2190F008F2EF2 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		CCE194EB1CA5626600C90EBE /* AirMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE194EF1CA5626600C90EBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCE194F11CA5626600C90EBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				CC8E93FE1CBF4CD800B6FA3F /* APIRequest.m */,
 				CC8E93FA1CBF4B7600B6FA3F /* APIRequestOperationManager.h */,
 				CC8E93FB1CBF4B7600B6FA3F /* APIRequestOperationManager.m */,
+				CCD704841CC2190F008F2EF2 /* APIManager.h */,
+				CCD704851CC2190F008F2EF2 /* APIManager.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				CC94D1FD1CC07CFC006E42F0 /* APIJSONParser.m in Sources */,
 				CCF2F9C51CA692F600159628 /* HistoryDataViewController.m in Sources */,
 				CCF2F9B01CA6185300159628 /* City.m in Sources */,
+				CCD704861CC2190F008F2EF2 /* APIManager.m in Sources */,
 				CCF2F9AC1CA6165300159628 /* ConstantManager.m in Sources */,
 				CCE1953F1CA563C500C90EBE /* UIView+Gap.m in Sources */,
 				CCF2F9A71CA6148E00159628 /* MonitoringStationSectionView.m in Sources */,

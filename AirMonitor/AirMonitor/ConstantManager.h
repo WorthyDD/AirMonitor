@@ -10,12 +10,15 @@
 
 #import "City.h"
 #import "MonitoringStation.h"
+#import "APIManager.h"
+#import "APIRequestOperationManager.h"
 
 @interface ConstantManager : NSObject
 
 
 + (instancetype) shareManager;
 
+- (void)reloadMonitorList;
 
 /**
  *  city & monitoring station list

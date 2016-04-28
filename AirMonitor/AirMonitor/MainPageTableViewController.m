@@ -22,6 +22,7 @@ NSString *const kMySitesArray = @"my_sites_array";
 
 @implementation MainPageTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
